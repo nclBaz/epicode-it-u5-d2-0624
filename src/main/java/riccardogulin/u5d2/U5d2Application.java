@@ -3,7 +3,7 @@ package riccardogulin.u5d2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import riccardogulin.u5d2.entities.BackendStudent;
+import riccardogulin.u5d2.entities.Interviewer;
 
 @SpringBootApplication
 public class U5d2Application {
@@ -13,8 +13,9 @@ public class U5d2Application {
 
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(U5d2Application.class);
 
-		BackendStudent bs = context.getBean(BackendStudent.class);
-		System.out.println(bs);
+		Interviewer i = context.getBean(Interviewer.class);
+		System.out.println(i);
+		i.askQuestion();
 
 		context.close();
 	}

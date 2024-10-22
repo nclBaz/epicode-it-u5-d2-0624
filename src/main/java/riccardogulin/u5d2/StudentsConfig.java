@@ -2,7 +2,9 @@ package riccardogulin.u5d2;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
-import riccardogulin.u5d2.entities.*;
+import riccardogulin.u5d2.entities.BackendStudent;
+import riccardogulin.u5d2.entities.FrontendStudent;
+import riccardogulin.u5d2.entities.FullstackStudent;
 
 @Configuration
 @PropertySource("application.properties")
@@ -22,6 +24,7 @@ public class StudentsConfig {
 	}
 
 	@Bean
+	@Primary
 	public String getName() {
 		return "Ajeje";
 	}
@@ -44,9 +47,10 @@ public class StudentsConfig {
 		return new BackendStudent(name, "Poretti");
 	}
 
+	/*
 	@Bean
 	public Interviewer getInterviewer(Student student) {
 		return new Interviewer(student);
-	}
+	}*/
 
 }
